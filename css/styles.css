@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 
+    0 2px 1px 0 rgba(46, 47, 66, 0.08);
+    background: #fff;
 }
 
 .section {
@@ -79,13 +83,6 @@ header {
     gap: 40px;
 }
 
-.menu-item-current::after {
-    content: "";
-    display: block;
-    border-bottom: 4px solid #404bbf;
-    border-radius: 2px;
-}
-
 .menu a {
     display: block;
     padding: 24px 0;
@@ -101,6 +98,30 @@ header {
 
 .menu a:hover, .menu a:focus {
     color: #404bbf;
+}
+
+.menu-item-current a {
+    color: #404bbf;
+}
+
+.menu-item:hover::after {
+    content: "";
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+}
+
+.menu-item-current::after {
+    content: "";
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
 }
 
 address {
@@ -213,8 +234,10 @@ address {
 }
 
 .features-card-image-box {
-    margin-bottom: 8px;
-    padding: 24px 0;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     background-color: #f4f4fd;
@@ -353,7 +376,9 @@ address {
     width: 100%;
     height: 100%;
     transform: translateY(100%);
-    transition: transform 250ms ease-in-out;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover .overlay {
@@ -390,6 +415,7 @@ footer {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
     gap: 120px;
 }
 
