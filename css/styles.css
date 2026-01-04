@@ -108,7 +108,7 @@ header {
     color: #404bbf;
 }
 
-.menu-item-current .menu-item-box::after {
+.menu-item-current a::after {
     content: "";
     display: block;
     position: absolute;
@@ -330,7 +330,7 @@ address {
 }
 
 .team-card-symbol {
-    fill: white;
+    fill: #f4f4fd;
 }
 
 .project-list {
